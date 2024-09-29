@@ -1,0 +1,194 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family:'android' ;
+    src: url('../fontes/idroid.otf') format(opentype);
+    font-weight: normal;
+}
+ :root{
+    --cor0:#83e1ad;
+    --cor1:#3ddc84;
+    --cor2: #2fa866;
+    --cor4:#1a5c37;
+    --cor5:#063d1e;
+
+    --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --font-destaque: 'bebas-neue-regular';
+    --font-android:'Android','cursive';
+
+ }
+ *{
+    margin: 0px;
+    padding: 0px;
+ }
+
+ body{
+    background-color:var(--cor0) ;
+    font-family: var(--font-padrao);
+}
+a[target="_blank"]::after { 
+    content: '\00a0\1f517';
+} /* aqui vai colocar a presilha do link depois de todos os links que são externos, todos que eu coloquei o target=blank */
+
+header{
+    background-image: linear-gradient(to top, var(--cor5) , var(--cor2));
+    background-color: var(--cor4);
+    min-height: 150px;
+    text-align: center;
+}
+
+header > h1{
+    color: white;
+    font-family: var(--font-destaque);
+    font-weight: normal;
+     padding-top: 30px;
+     padding-bottom: 20px;
+     font-size: 3em;
+     text-shadow:4px 3px 5px rgba(0, 0, 0, 0.493);
+}
+
+header > p{
+    color: white;
+    font-family: var(--font-padrao);
+     max-width: 500px; /* esse width tem q ser max se não a letra vaza */
+     margin:auto; /* tenho que declarar isso se não a letra não centraliza porque ao declarar o width ela vira uma box level */
+     padding-left: 10px;/* aqui da uma fastada ao diminuir a tela */
+     padding-right: 10px;
+     text-shadow:2px 2px 2px rgba(0, 0, 0, 0.747);
+     margin-bottom: 5px;
+}
+
+nav{
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.473);
+}
+nav > a{
+    color:var(--cor1);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 1s;
+}
+a:hover{
+    background-color: var(--cor2);
+    color: var(--cor3);
+    border-radius: 3px;
+}
+
+
+main{
+    min-width: 320px; /* aqui deixa as letras responsivas */
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;/*  desgruda o main do header */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.432);
+    border-bottom-left-radius: 10px; /* borda arredondada só em baixo */
+    border-bottom-right-radius: 10px;
+}
+
+main h1{
+    color: var(--cor5);
+    font-family: var(--font-android);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+
+main h2{
+    font-family: var(--font-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    background-image:linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px;
+}
+
+main p{
+    font-weight: normal;
+    margin:15px 0px; /* descolar o parágrafo dos titulos e coisas acima */ 
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 2em; /* espaçamento das linhas do p */
+    
+}
+
+main a{
+    text-decoration: none;
+    font-weight: bold;
+    color:var(--cor5);
+    background-color: var(--cor0);
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+main a:hover{
+    text-decoration: underline;
+   
+    
+    
+}
+main strong{
+    color: var(--cor5);
+    font-weight: bolder;
+}
+
+main img{
+    width: 100%; /* imagem responsiva */
+}
+main img.pequena{
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+ div.video{
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px; /* so aqui eu expandi a margem pro lado e separei o video do conteudo embaixo */
+    padding: 20px;
+    padding-bottom: 52%;
+    position: relative;
+}  
+
+ div.video > iframe{
+    position: absolute;
+    top:5% ;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+ 
+aside {
+   background-color: var(--cor1);
+   padding: 10px;
+   border-radius: 10px;
+   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+aside > h3{
+    background-color: var(--cor4);
+    font-family: var(--font-android);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px; /* numero negativo expande margin */
+    border-radius: 10px 10px 0px 0px;
+    font-weight: normal;
+    
+}
+
+aside > ul{
+    list-style-type: '\2714';
+     list-style-position: inside;
+     columns: 2;
+}
+
+footer{
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+    word-spacing: 2px; /* espaçamento entre palavras e o entre letras é o letter */
+}
+
+
